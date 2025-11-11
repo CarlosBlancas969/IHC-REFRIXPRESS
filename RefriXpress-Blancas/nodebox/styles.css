@@ -1,0 +1,413 @@
+/* styles.css (corregido y limpio) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+/* --- HEADER --- */
+header {
+  background: linear-gradient(to right, #2f00ff 0%, #007bff 49%);
+  color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2000; /* asegurar que header quede arriba */
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo i {
+  font-size: 28px;
+}
+
+/* --- MENU HORIZONTAL --- */
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Base para los li del menú */
+.Menu-Horizontal li {
+  position: relative;
+  z-index: 3000; /* por encima del banner */
+}
+
+/* Enlaces del menú principal */
+.Menu-Horizontal li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.Menu-Horizontal li a:hover {
+  color: #fefefe;
+  text-decoration: underline;
+}
+
+/* --- SUBMENÚ VERTICAL --- */
+/* Usamos opacity/visibility para evitar el "parpadeo" al mover el cursor */
+.Menu-Vertical {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background-color: #2f00ff;
+  border-radius: 8px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.28);
+
+  /* oculto por defecto, pero mantiene el flujo para transiciones */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  pointer-events: none; /* no recibe eventos mientras está oculto */
+  z-index: 9999; /* aseguramos que quede bien arriba */
+}
+
+.Menu-Vertical li {
+  list-style: none;
+}
+
+.Menu-Vertical li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.Menu-Vertical li a:hover {
+  background-color: white;
+  color: #3f65ac;
+}
+
+/* Mostrar el submenú al hacer hover en el li padre */
+.Menu-Horizontal li:hover .Menu-Vertical {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto; /* ahora sí responde a puntero */
+}
+
+/* --- NAV BAR (contenedor del menú) --- */
+nav {
+  background: #0d47a1;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  gap: 40px;
+  position: relative; /* crea stacking context para el menú */
+  z-index: 9999; /* aseguramos que nav esté por encima del banner */
+}
+
+/* estilos relacionales para enlaces si los usas dentro de nav */
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: "↓";
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #00e5ff;
+}
+
+nav .active {
+  background-color: #000;
+  color: #0d47a1;
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+/* --- BANNER --- */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 5000; /* encima de la imagen */
+}
+
+.banner-texto h2 {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: inline-block;
+  padding: 6px 50px;
+  border-radius: 25px;
+}
+
+.banner-texto p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 18px 0;
+}
+
+.banner-texto button {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-texto button:hover {
+  background: linear-gradient(to right, #2f00ff 0%, #007bff 49%);
+}
+
+/* --- SECCIONES --- */
+section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.subtitulo {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* --- PRODUCTOS --- */
+.productos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding: 15px;
+  background-color: #fff;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.producto:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 210px;
+  border-radius: 10px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.oferta {
+  background-color: #2f00ff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.producto h3 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #222;
+}
+
+.precio {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+
+.precio span {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.producto button {
+  background-color: #2f00ff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.producto button:hover {
+  background-color: #007bff;
+}
+
+/* --- BURBUJAS --- */
+.burbujas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.productob {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  padding: 15px;
+  background-color: #fff;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.productob:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.productob img {
+  width: 100px;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
+}
+.productob button:hover {
+  background-color: #007bff;
+}
+.arrow {
+  font-size: 25px;
+  color: #2f00ff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  color: #007bff;
+}
+
+/* --- FORMULARIO --- */
+.sec-formulario {
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.div-cont-formulario {
+  background-color: white;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.campo {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #2f00ff 0%, #007bff 49%);
+}
+
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgb(9, 9, 9);
+}
+
+input[type="text"],
+select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.lst-checkbox,
+.lst-radio {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+}
+
+.lst-checkbox li,
+.lst-radio li {
+  margin-bottom: 8px;
+}
+
+button {
+  background-color: #2f00ff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
