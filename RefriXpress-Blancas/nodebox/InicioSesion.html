@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refriexpress</title>
+    <link rel="stylesheet" href="styles.css" /> 
+    <link rel="stylesheet" href="pie.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          height="45"
+          width="45"
+          src="imagen/Logo.png"
+          alt="Logo RefriXpress"
+        />
+        <i class=""></i> REFRI
+        <span class="highlight">XPRESS</span>
+      </div>
+    </header>
+
+    <nav>
+      <ul class="Menu-Horizontal">
+        <li>
+          <a href="#">Inicio</a>
+          <ul class="Menu-Vertical">
+            <li><a href="#">Métodos de pago</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Recomendador de bebidas</a></li>
+            <li><a href="#">Suscripción mensual</a></li>
+            <li><a href="#">Atención al cliente</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Vinos</a></li>
+        <li><a href="#">Licores</a></li>
+        <li><a href="#">Agua tonica</a></li>
+        <li><a href="#">Cerveza</a></li>
+        <li><a href="#">Espumantes</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li class="btn-salir"><a href="index.html">Salir</a></li>
+        
+      </ul>
+    </nav>
+
+    <!-- banner  -->
+    <section class="banner">
+      <img
+        height="1000"
+        width="1400"
+        src="imagen/Cap1.png"
+        alt="Imagen bebida"
+        class="banner-img"
+      />
+      <div class="banner-texto">
+        <h2>¡NUEVO NOMBRE, MISMO RON!</h2>
+        <p>ARTIENHANCE LICURLS</p>
+        <button>COMPRAR</button>
+      </div>
+    </section>
+
+    <!-- Los mas vendidos  -->
+    <section>
+      <h2>LOS MAS VENDIDOS</h2>
+      <div class="productos">
+        <div class="producto">
+          <span class="oferta">¡OFERTA! -50%</span>
+          <img src="imagen/vino1.png" alt="vino" />
+          <h3>Santa Julia Malbec Reserva 750ml x6 botellas</h3>
+          <div class="precio"><span>S/. 399.90</span> S/. 199.90</div>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <span class="oferta">¡OFERTA! -50%</span>
+          <img src="imagen/vino2.png" alt="gin" />
+          <h3>Citadelle Gin 750ml. x6 botellas</h3>
+          <div class="precio"><span>S/. 999.00</span> S/. 499.00</div>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <span class="oferta">¡OFERTA! -50%</span>
+          <img src="imagen/vino3.png" alt="prosecco" />
+          <h3>Prosecco Zonin 750ml. x5 botellas</h3>
+          <div class="precio"><span>S/. 399.00</span> S/. 199.00</div>
+          <button>Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- coleccion burbujas -->
+    <section>
+      <h2>COLECCION DE BURBUJAS</h2>
+      <p class="subtitulo">ESPUMANTES - BURBUJAS DE 200ML</p>
+      <div class="burbujas">
+        <div class="arrow"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="productos">
+          <div class="productob">
+            <img src="imagen/vino4.png" alt="espumante" />
+            <h3>Espumante SEGURA VIUDAS Reserva Heredad Brut Botella 750ml</h3>
+            <div class="precio">S/. 155.90</div>
+            <button>Añadir al carrito</button>
+          </div>
+
+          <div class="productob">
+            <img src="imagen/vino5.png" alt="espumante" />
+            <h3>Espumante SEGURA VIUDAS Aria Brut Nature Botella 750ml</h3>
+            <div class="precio">S/. 208.90</div>
+            <button>Añadir al carrito</button>
+          </div>
+
+          <div class="productob">
+            <img src="imagen/vino6.png" alt="espumante" />
+            <h3>Espumante SEGURA VIUDAS Brut Rosado Botella 750ml</h3>
+            <div class="precio">S/. 99.90</div>
+            <button>Añadir al carrito</button>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </div>
+    </section>
+    <div class="video-lado">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/WKI6Yh_rtH8?si=qfCjYB32NailMleO"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <!--Formulario-->
+    <section class="sec-formulario">
+      <div class="div-cont-formulario">
+        <h2>Formulario de Registro</h2>
+        <p>Complete todos los campos correctamente</p>
+        <form class="formulario">
+          <div class="campo">
+            <label for="nombre">Nombres Completos:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese su nombre completo"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="nombre">Pais:</label>
+            <select id="pais" name="pais">
+              <option value="">seleccione un pais</option>
+              <option value="Peru">Peru</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Chile">Chile</option>
+            </select>
+          </div>
+
+          <!--CheckBOX-->
+          <div class="campo">
+            <label>Intereses:</label>
+            <ul class="lst-checkbox">
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="intereses"
+                    value="teconologia"
+                  />Tecnologia</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="intereses"
+                    value="educacion"
+                  />Educacion</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="intereses"
+                    value="deportes"
+                  />Deportes</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="intereses"
+                    value="artes"
+                  />Artes</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="intereses"
+                    value="ciencia"
+                  />Ciencia</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!--Radio Button-->
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lst-radio">
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="genero"
+                    value="masculino"
+                  />Masculino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="radio"
+                    name="genero"
+                    value="femenino"
+                  />Femenino</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button>Enviar</button>
+        </form>
+      </div>
+    </section>
+     <!-- Enlaces legales -->
+     <div class="footer-links">
+      <h4>Legal</h4>
+      <a href="PoliticaDePrivacidad.html"
+        target="_blank">Política de Privacidad</a
+      >
+      <!-- Dentro de href llama a un documento pdf con la poltica-->
+      <a href="TerminosYCondiciones.html" target="_blank">Términos y Condiciones</a>
+      <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+      <a href="PorteccionDeDatos.html" target="_blank">Protección de Datos</a>
+    </div>
+
+    <!-- Redes sociales con íconos personalizados -->
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <a href="#"
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+          alt="Facebook"
+          class="social-icon"
+      /></a>
+      <a href="#"
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+          alt="Instagram"
+          class="social-icon"
+      /></a>
+      <a href="#"
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+          alt="LinkedIn"
+          class="social-icon"
+      /></a>
+      <a href="#"
+        ><img
+          src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+          alt="Twitter"
+          class="social-icon"
+      /></a>
+    </div>
+  </div>
+</footer>
+</section>
+  </body>
+</html>
